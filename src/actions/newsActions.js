@@ -32,7 +32,7 @@ export const createNews =
       };
 
       const { data } = await axios.post(
-        `/api/news/create`,
+        `https://auto-ecole-admin-frontend.onrender.com/api/news/create`,
         {
           type,
           titre,
@@ -69,7 +69,7 @@ export const allNewsList = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`/api/news`, config);
+    const { data } = await axios.get(`https://auto-ecole-admin-frontend.onrender.com/api/news`, config);
 
     dispatch({
       type: NEWS_LIST_SUCCESS,
@@ -105,7 +105,7 @@ export const updateNews = (id, news) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.put(`/api/news/${id}`, news, config);
+    const { data } = await axios.put(`https://auto-ecole-admin-frontend.onrender.com/api/news/${id}`, news, config);
 
     dispatch({ type: NEWS_UPDATE_SUCCESS, payload: data });
   } catch (error) {
@@ -138,7 +138,7 @@ export const deleteNews = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.delete(`/api/news/${id}`, config);
+    const { data } = await axios.delete(`https://auto-ecole-admin-frontend.onrender.com/api/news/${id}`, config);
 
     dispatch({ type: NEWS_DELETE_SUCCESS, payload: data });
   } catch (error) {
