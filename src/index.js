@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 import './index.css';
-import App from './App';
 import './bootstrap.min.css';
+import App from './App';
 
 import 'css-pro-layout/dist/css/css-pro-layout.min.css';
 import 'react-pro-sidebar/dist/css/styles.css';
